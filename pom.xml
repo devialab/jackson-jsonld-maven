@@ -11,10 +11,18 @@
     <build>
         <plugins>
             <plugin>
-                <!-- maven plugin issue with Java 8 see https://stackoverflow.com/a/38547240 -->
+                <!-- need to add this due to maven plugin issue with Java 8 see https://stackoverflow.com/a/38547240 -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
                 <version>3.4</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
