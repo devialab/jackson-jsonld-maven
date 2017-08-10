@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.devialab</groupId>
     <artifactId>jackson-jsonld-maven</artifactId>
     <packaging>maven-plugin</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>jackson-jsonld-maven</name>
     <description>Maven plugin to generate a JSONLD context automatically from your java classes.</description>
     <url>https://github.com/devialab/jackson-jsonld-maven</url>
@@ -14,7 +13,7 @@
         <connection>scm:git:git@github.com:devialab/jackson-jsonld-maven.git</connection>
         <developerConnection>scm:git:git@github.com:devialab/jackson-jsonld-maven.git</developerConnection>
         <url>scm:git:git@github.com:devialab/jackson-jsonld-maven.git</url>
-        <tag>HEAD</tag>
+        <tag>jackson-jsonld-maven-0.0.1</tag>
     </scm>
 
     <developers>
