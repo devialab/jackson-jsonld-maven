@@ -6,6 +6,7 @@
     <packaging>maven-plugin</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>jackson-jsonld-maven</name>
+    <description>Maven plugin to generate a JSONLD context automatically from your java classes.</description>
     <url>https://github.com/devialab/jackson-jsonld-maven</url>
 
 
@@ -15,6 +16,25 @@
         <url>scm:git:git@github.com:devialab/jackson-jsonld-maven.git</url>
         <tag>HEAD</tag>
     </scm>
+
+    <developers>
+        <developer>
+            <name>Alexander De Leon</name>
+            <email>alex@devialab.com</email>
+            <timezone>Europe/Madrid</timezone>
+            <roles>
+                <role>committer</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Bernhard Wenzel</name>
+            <email>bernhard@devialab.com</email>
+            <timezone>Europe/London</timezone>
+            <roles>
+                <role>committer</role>
+            </roles>
+        </developer>
+    </developers>
 
     <build>
         <plugins>
