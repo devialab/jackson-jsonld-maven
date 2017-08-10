@@ -30,13 +30,13 @@ public class GenerateContext extends AbstractMojo
         {
             ObjectMapper mapper = new ObjectMapper();
             ObjectNode jarCache = mapper.createObjectNode();
-            jarCache.put("X-Classpath", "http://schemas.solera.com/data-capture/");
+            jarCache.put("X-Classpath", "data-capture.json");
             jarCache.put("Content-Location", "http://schemas.solera.com/data-capture/");
             jarCache.put("Content-Type", "application/ld+json");
 
             // Write cache file
             Path jarCacheFilePath = Paths.get(jarCacheFile.toURI());
-            if (!Files.exists(jarCacheFilePath ))
+            if (!Files.exists(jarCacheFilePath))
             {
                 getLog().info("Creating jar cache file: " + jarCacheFilePath);
                 Files.createFile(jarCacheFilePath);
