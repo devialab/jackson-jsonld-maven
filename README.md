@@ -9,10 +9,16 @@ Maven plugin for jackson-jsonld
         <plugin>
             <groupId>com.devialab</groupId>
             <artifactId>jackson-jsonld-maven</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.2-SNAPSHOT</version>
+            <configuration>
+                <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                <fileName>data-capture.json</fileName>
+                <packageName>com.solera.global.datacapture.model.domain</packageName>
+                <contentLocation>http://schemas.solera.com/data-capture/</contentLocation>
+            </configuration>
             <executions>
                 <execution>
-                    <phase>process-resources</phase>
+                    <phase>generate-test-sources</phase>
                     <goals>
                         <goal>generate-context</goal>
                     </goals>
@@ -21,14 +27,4 @@ Maven plugin for jackson-jsonld
         </plugin>
     </plugins>
 </build>
-```
-
-Configuration options:
-
-```
-<configuration>
-    <dataCaptureFile>src/main/resources/data-capture.json</dataCaptureFile>
-    <jarCacheFile>src/main/resources/jarcache.json</jarCacheFile>
-</configuration>
-
 ```
