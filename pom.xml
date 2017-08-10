@@ -8,6 +8,14 @@
     <name>jackson-jsonld-maven</name>
     <url>https://github.com/devialab/jackson-jsonld-maven</url>
 
+
+    <scm>
+        <connection>scm:git:git@github.com:devialab/jackson-jsonld-maven.git</connection>
+        <developerConnection>scm:git:git@github.com:devialab/jackson-jsonld-maven.git</developerConnection>
+        <url>scm:git:git@github.com:devialab/jackson-jsonld-maven.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
     <build>
         <plugins>
             <plugin>
