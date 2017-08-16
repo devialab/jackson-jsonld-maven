@@ -9,7 +9,7 @@ Maven plugin for jackson-jsonld
         <plugin>
             <groupId>com.devialab</groupId>
             <artifactId>jackson-jsonld-maven</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>0.0.3</version>
             <configuration>
                 <outputDirectory>${project.build.outputDirectory}</outputDirectory>
                 <fileName>context.json</fileName>
