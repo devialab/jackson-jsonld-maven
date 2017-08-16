@@ -2,6 +2,7 @@ package com.devialab;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import ioinformarics.oss.jackson.module.jsonld.JsonldContextFactory;
 import org.apache.maven.plugin.AbstractMojo;
@@ -44,10 +45,12 @@ public class GenerateContext extends AbstractMojo
         {
             addProjectClasspath();
             ObjectMapper mapper = new ObjectMapper();
+            ArrayNode arrayNode = mapper.createArrayNode();
             ObjectNode jarCache = mapper.createObjectNode();
             jarCache.put("X-Classpath", fileName.getName());
             jarCache.put("Content-Location", contentLocation);
             jarCache.put("Content-Type", "application/ld+json");
+            arrayNode.add(jarCache);
 
             // Write jar cache file
             Path jarCacheFilePath = Paths.get(outputDirectory.getAbsolutePath(), "jarcache.json");
@@ -55,7 +58,7 @@ public class GenerateContext extends AbstractMojo
             {
                 Files.createFile(jarCacheFilePath);
             }
-            Files.write(jarCacheFilePath, mapper.writeValueAsBytes(jarCache));
+            Files.write(jarCacheFilePath, mapper.writeValueAsBytes(arrayNode));
             getLog().info("Jar cache file written to: " + jarCacheFilePath);
 
             // Write output file
