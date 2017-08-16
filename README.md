@@ -12,9 +12,9 @@ Maven plugin for jackson-jsonld
             <version>0.0.2-SNAPSHOT</version>
             <configuration>
                 <outputDirectory>${project.build.outputDirectory}</outputDirectory>
-                <fileName>data-capture.json</fileName>
-                <packageName>com.solera.global.datacapture.model.domain</packageName>
-                <contentLocation>http://schemas.solera.com/data-capture/</contentLocation>
+                <fileName>context.json</fileName>
+                <packageName>com.example.domain</packageName>
+                <contentLocation>http://example.com/context-jsonld/</contentLocation>
             </configuration>
             <executions>
                 <execution>
